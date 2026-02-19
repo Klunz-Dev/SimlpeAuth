@@ -5,10 +5,10 @@ class Base(DeclarativeBase):
     pass
 
 class UserModel(Base):
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True, unique=True)
     first_name: Mapped[str] = mapped_column(nullable=False)
     username: Mapped[str] = mapped_column(unique=True, nullable=False)
     bio: Mapped[str] = mapped_column(nullable=False)
-    mail: Mapped[str] = mapped_column(nullable=False)
+    mail: Mapped[str] = mapped_column(nullable=False, unique=True)
     hash_password: Mapped[str] = mapped_column(String(64), nullable=False)
     salt: Mapped[str] = mapped_column(String(32), nullable=False)

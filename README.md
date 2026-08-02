@@ -20,7 +20,7 @@
 
 1. **Клонировать репозиторий:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Klunz-Dev/SimpleAuth
    cd SimpleAuth
    ```
 
